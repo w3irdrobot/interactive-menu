@@ -6,7 +6,8 @@
     "build:js": "browserify src/js/app.js -d -t babelify -o build/bundle.js",
     "watch:js": "watchify src/js/app.js -d -t babelify -o build/bundle.js",
     "build:scss": "node-sass src/scss/styles.scss --output build --source-map-embed --source-map-contents",
-    "watch:scss": "npm run build:scss -- --watch"
+    "watch:scss": "npm run build:scss -- --watch",
+    "build": "npm run build:js && npm run build:scss"
   },
   "repository": {
     "type": "git",
