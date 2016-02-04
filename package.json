@@ -1,0 +1,29 @@
+{
+  "name": "interactive-menu",
+  "version": "1.0.0",
+  "description": "Building an Interactive Menu in Vanilla JavaScript",
+  "scripts": {
+    "build:js": "browserify src/js/app.js -d -t babelify -o build/bundle.js",
+    "watch:js": "watchify src/js/app.js -d -t babelify -o build/bundle.js",
+    "build:scss": "node-sass src/scss/styles.scss --output build --source-map-embed --source-map-contents",
+    "watch:scss": "npm run build:scss -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/searsaw/interactive-menu.git"
+  },
+  "author": "Alex Sears",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/searsaw/interactive-menu/issues"
+  },
+  "homepage": "https://github.com/searsaw/interactive-menu#readme",
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "node-sass": "^3.4.2",
+    "watchify": "^3.7.0"
+  }
+}
