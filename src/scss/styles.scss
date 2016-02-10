@@ -44,6 +44,9 @@ h1,h2,h3,h4,h5 { font-family: $title-font; }
         text-align: center;
         color: $primary;
     }
+    .desc {
+        padding: 10px 0;
+    }
     .name {
         display: inline-block;
         font-size: 1.25rem;
