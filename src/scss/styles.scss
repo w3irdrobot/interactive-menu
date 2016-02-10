@@ -26,15 +26,16 @@ h1,h2,h3,h4,h5 { font-family: $title-font; }
 
 
 .columns {
-    margin-top: 20px;
-    .container {
+    margin: 20px auto 0;
+    width: 90%;
+    .collection {
+        margin: 20px 0;
         padding: 20px;
         border: 3px double $body-color;
         // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2)
     }
     .menu_item {
         padding: 20px;
-
     }
     .menu_item + .menu_item { border-top: 1px dotted #ccc; }
 
