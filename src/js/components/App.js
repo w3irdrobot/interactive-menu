@@ -1,9 +1,6 @@
-import { div, ul, li, text, addId } from '../builders';
+import { div, addId } from '../builders';
+import NavBar from './Navbar';
 
-const listItems = ['Jalapeño Poppers', 'Mozzarella Sticks'].map(app => li(text(app)));
-const list = ul(...listItems);
-const appetizers = addId(div(list), 'appetizers');
-const left = addId(div(appetizers), 'left');
-const App = addId(div(left), 'app-container');
+const App = addId(div(NavBar), 'app-container');
 
 export default App;
