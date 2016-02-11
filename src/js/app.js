@@ -1,2 +1,4 @@
-const list = ['alex', 'sears', 'teddy', 'bear'];
-console.log(list.map(name => `Hello, ${name}`).join(' => '));
+import App from './components/App';
+
+const body = document.querySelector('body');
+body.insertBefore(App, body.childNodes[0]);
