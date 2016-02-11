@@ -1,7 +1,8 @@
-@import "../../node_modules/bulma/bulma";
 @import url(https://fonts.googleapis.com/css?family=Muli:400,300);
 @import url(https://fonts.googleapis.com/css?family=Ovo);
 @import url(https://fonts.googleapis.com/css?family=Vast+Shadow);
+
+@import "../../node_modules/bulma/bulma";
 
 // FONTS
 $header-font: 'Vast Shadow', cursive;
@@ -24,19 +25,27 @@ body {
 
 h1,h2,h3,h4,h5 { font-family: $title-font; }
 
-
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
 .columns {
     margin: 20px auto 0;
     width: 90%;
     .collection {
         margin: 20px 0;
-        padding: 20px;
-        border: 3px double $body-color;
-        // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2)
+        padding: 30px 50px;
+        @media(max-width: 720px) {
+            padding: 15px;
+        }
     }
     .menu_item {
-        padding: 20px;
+        padding: 20px 0;
+        @extend %clearfix;
     }
     .menu_item + .menu_item { border-top: 1px dotted #ccc; }
 
