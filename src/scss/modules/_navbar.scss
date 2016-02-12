@@ -11,6 +11,16 @@
     &.scrolled {
         background-color: $navbar-bg-scrolled;
     }
+    &.scrolled {
+        .logo {
+            display: block;
+        }
+    }
+    .logo {
+        display: none;
+        margin: 20px 45px;
+        width: 30px;
+    }
     .cart {
         .navbar-item {
             position: relative;
