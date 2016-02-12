@@ -1,0 +1,24 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: $background;
+    font-family: $body-font;
+    font-weight: 300;
+    line-height: 1;
+    color: $body-color;
+}
+
+h1,h2,h3,h4,h5 { font-family: $title-font;}
+
+.button {
+    transition: all 100ms ease-out;
+    background-color: $button-bg;
+    border: 1px solid $button-border;
+    font-family: $body-font;
+    color: $button-bg-hover;
+    &:hover {
+        border: 1px solid $button-border;
+        background-color: $button-bg-hover;
+        color: #fff;
+    }
+}

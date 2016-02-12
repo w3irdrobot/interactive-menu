@@ -1,0 +1,31 @@
+.columns {
+    .collection {
+        margin: 20px 0;
+        padding: 20px;
+        @media(max-width: 720px) {
+            padding: 15px;
+        }
+    }
+    .menu_item {
+        padding: 20px 0;
+        @extend %clearfix;
+    }
+    .menu_item + .menu_item { border-top: 1px dotted #ccc; }
+
+    .title {
+        font-family: $header-font;
+        text-align: center;
+        color: $primary;
+    }
+    .desc {
+        padding: 20px 0;
+        line-height: 1.4;
+    }
+    .name {
+        display: inline-block;
+        font-size: 1.25rem;
+    }
+    .price {
+        font-family: $title-font;
+    }
+}

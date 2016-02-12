@@ -1,0 +1,47 @@
+.navbar:not(:last-child) {
+    margin-bottom: 0;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 100;
+    &.scrolled {
+        background-color: $navbar-bg-scrolled;
+    }
+    .cart {
+        .navbar-item {
+            position: relative;
+            margin: 20px 45px;
+            .cart-items {
+                position: absolute;
+                top: -5px;
+                right: -10px;
+                display: none;
+                font-size: 1rem;
+                color: #fff;
+                cursor: pointer;
+                z-index: 10;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50%;
+                    background-color: $cart-items-bg;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+            }
+            .fa {
+                cursor: pointer;
+                font-size: 2rem;
+                color: #fff;
+            }
+        }
+    }
+}

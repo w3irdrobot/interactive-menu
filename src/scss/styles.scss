@@ -1,126 +1,23 @@
+// FONTS
+
 @import url(https://fonts.googleapis.com/css?family=Muli);
 @import url(https://fonts.googleapis.com/css?family=Stint+Ultra+Expanded);
 @import url(https://fonts.googleapis.com/css?family=Ultra);
 @import url(https://fonts.googleapis.com/css?family=Vast+Shadow);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 
+// FRAMEWORK
 @import "../../node_modules/bulma/bulma";
 
-// FONTS
-$header-font: 'Vast Shadow', cursive;
-$title-font: 'Stint Ultra Expanded', sans-serif;
-$body-font: 'Muli', sans-serif;
-$hero-font-light: 'Stint Ultra Expanded', sans-serif;
-$hero-font-bold: 'Ultra', sans-serif;
+// VARIABLES
+@import 'variables/variables';
 
-// COLORS
-$primary: #dd1021;
-$secondary: white;
-$body-color: #232323;
-$background: #fbfbf3;
-$footer-bg: #7A7D5E;
+// GLOBALS
+@import 'global/global';
 
-body {
-    height: 100%;
-    width: 100%;
-    background-color: $background;
-    font-family: $body-font;
-    font-weight: 300;
-    color: $body-color;
-}
-
-h1,h2,h3,h4,h5 { font-family: $title-font; line-height: 1; }
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-.navbar:not(:last-child) {
-    margin-bottom: 0;
-}
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: transparent;
-    height: 60px;
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    height: 70vh;
-    background: url('http://unsplash.it/1600/900/?image=876') no-repeat;
-    background-size: cover;
-    @media(max-width: 720px) {
-        height: 50vh;
-    }
-    .logo {
-        margin: 0 0 20px;
-        width: 120px;
-    }
-    .hero-content {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        justify-content: center;
-        line-height: 1;
-        color: #fff;
-    }
-    .hero-text-light {
-        font-family: $hero-font-light;
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        @media(max-width: 720px) {
-            font-size: 1.75rem;
-        }
-    }
-    .hero-text-bold {
-        font-family: $hero-font-bold;
-        font-size: 4.5rem;
-        text-transform: uppercase;
-        @media(max-width: 720px) {
-            font-size: 3rem;
-        }
-    }
-}
-
-.columns {
-    .collection {
-        margin: 20px 0;
-        padding: 20px;
-        @media(max-width: 720px) {
-            padding: 15px;
-        }
-    }
-    .menu_item {
-        padding: 20px 0;
-        @extend %clearfix;
-    }
-    .menu_item + .menu_item { border-top: 1px dotted #ccc; }
-
-    .title {
-        font-family: $header-font;
-        text-align: center;
-        color: $primary;
-    }
-    .desc {
-        padding: 20px 0;
-    }
-    .name {
-        display: inline-block;
-        font-size: 1.25rem;
-    }
-    .price {
-        font-family: $title-font;
-    }
-}
-
-.footer {
-    background-color: $footer-bg;
-}
+// MODULES
+@import 'modules/navbar';
+@import 'modules/hero';
+@import 'modules/columns';
+@import 'modules/footer';
+@import 'modules/modal';

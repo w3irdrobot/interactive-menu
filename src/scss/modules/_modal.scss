@@ -1,0 +1,84 @@
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.25);
+    z-index: 10;
+    .menu {
+        position: relative;
+        padding: 0 20px;
+        @extend %clearfix;
+        border-radius: 0;
+        background-color: #fff;
+    }
+    .modal-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 20px 50px 50px;
+        width: 90%;
+        max-width: 750px;
+        background-color: $background;
+        border-radius: 3px;
+        transform: translate(-50%, -50%);
+        .title {
+            font-family: $header-font;
+            font-size: 28px;
+            text-align: center;
+            color: $primary;
+        }
+        .close {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            color: #fff;
+            cursor: pointer;
+            transition: all 100ms ease-out;
+            &:hover {
+                color: $primary;
+            }
+        }
+        .remove {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            color: #ccc;
+            cursor: pointer;
+            transition: all 100ms ease-out;
+            font-size: 1rem;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+    .menu-item {
+        position: relative;
+        padding: 20px 0;
+        .price {
+            margin-right: 30px;
+        }
+    }
+    .menu-item + .menu-item { border-top: 1px dotted #ccc; }
+
+    .button {
+        background-color: $button-bg-hover;
+        color: #fff;
+        &:hover {
+            background-color: lighten($button-bg-hover, 10%);
+            color: #fff;
+        }
+    }
+}

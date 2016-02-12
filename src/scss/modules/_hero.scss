@@ -1,0 +1,39 @@
+.splash {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 70vh;
+    background: url('http://unsplash.it/1600/900/?image=876') no-repeat;
+    background-size: cover;
+    @media(max-width: 720px) {
+        height: 50vh;
+    }
+    .logo {
+        margin: 0 0 20px;
+        width: 120px;
+    }
+    .hero-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+    }
+    .hero-text-light {
+        font-family: $hero-font-light;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        @media(max-width: 720px) {
+            font-size: 1.75rem;
+        }
+    }
+    .hero-text-bold {
+        font-family: $hero-font-bold;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        @media(max-width: 720px) {
+            font-size: 3rem;
+        }
+    }
+}
