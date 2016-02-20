@@ -7,7 +7,8 @@
     "watch:js": "watchify src/js/index.js -d -v -t babelify -o build/bundle.js",
     "build:scss": "node-sass src/scss/styles.scss --output build --source-map-embed --source-map-contents",
     "watch:scss": "npm run build:scss -- --watch",
-    "build": "npm run build:js && npm run build:scss"
+    "build": "npm run build:js && npm run build:scss",
+    "serve": "npm run build && http-server build -p 8080 -o"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "bulma": "0.0.12",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.0",
+    "http-server": "^0.9.0",
     "node-sass": "^3.4.2",
     "watchify": "^3.7.0"
   }

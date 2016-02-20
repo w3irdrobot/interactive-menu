@@ -12,6 +12,18 @@ export function div(...children) {
   return createElement('div', ...children);
 }
 
+export function article(...children) {
+  return createElement('article', ...children);
+}
+
+export function h1(...children) {
+  return createElement('h1', ...children);
+}
+
+export function h3(...children) {
+  return createElement('h3', ...children);
+}
+
 export function nav(...children) {
   return createElement('nav', ...children);
 }
@@ -48,6 +60,10 @@ export function img(source) {
   const image = createElement('img');
   image.src = source;
   return image;
+}
+
+export function button(...children) {
+  return createElement('button', ...children);
 }
 
 export function addId(element, id) {
