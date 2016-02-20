@@ -1,10 +1,10 @@
 import { div, addId } from '../builders';
-import Navbar from './Navbar';
-import Hero from './Hero';
-import Footer from './Footer';
+import navbar from './navbar';
+import hero from './hero';
+import bottom from './bottom';
 
 // Todo: Modal needs to be above all content
 
-const App = addId(div(Navbar, Hero, Footer), 'app-container');
-
-export default App;
+export default function app() {
+  return addId(div(navbar(), hero(), bottom()), 'app-container');
+}
