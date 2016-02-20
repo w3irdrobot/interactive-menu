@@ -4,5 +4,95 @@
       "name": "Fried Asparagus",
       "price": "4.50",
       "description": "Fresh asparagus lightly battered and quick-fried. Topped with crumbled queso fresco, chopped cilantro & a drizzle of chimichurri sauce. Served with roasted garlic aioli."
+  },
+  {
+      "type": "appetizer",
+      "name": "Loaded Boneless Wings",
+      "price": "6.75",
+      "description": "Boneless wings smothered in white queso, 3-cheese blend, applewood smoked bacon & chopped green onions. Served with a side of house-made ranch."
+  },
+  {
+      "type": "appetizer",
+      "name": "White Spinach Queso",
+      "price": "5",
+      "description": "White queso & chopped spinach topped with shredded Monterey Jack cheese, house-made pico de gallo, fresh guacamole, queso fresco & chopped cilantro. Served with warm tostada chips & fresh salsa."
+  },
+  {
+      "type": "appetizer",
+      "name": "Crispy Cheddar Bites",
+      "price": "7.25",
+      "description": "Lightly battered & golden fried white & yellow Wisconsin cheese curds topped with a sprinkle of Cajun spice and chopped cilantro. Served with house-made ancho-chile ranch."
+  },
+  {
+      "type": "soup_salad",
+      "name": "House Salad",
+      "price": "3.50",
+      "description": "Freshly diced tomatoes, red onion, shredded carrots, cucumbers, 3-cheese blend & garlic croutons. Served with your choice of dressing."
+  },
+  {
+      "type": "soup_salad",
+      "name": "Santa Fe Chicken Salad",
+      "price": "8",
+      "description": "Grilled chile-seasoned chicken, house-made pico de gallo, diced avocado, chopped cilantro, tortilla strips with house-made ranch & a drizzle of spicy Santa Fe sauce."
+  },
+  {
+      "type": "soup_salad",
+      "name": "Chicken Enchilada Soup",
+      "price": "5",
+      "description": "Topped with crispy tortilla strips & 3-cheese blend."
+  },
+  {
+      "type": "soup_salad",
+      "name": "Terlingua Chili",
+      "price": "6.35",
+      "description": "Slow-cooked chili with beef, onions & chiles. Topped with cheese."
+  },
+  {
+      "type": "burger",
+      "name": "Sweet & Smoky Burger",
+      "price": "8.75",
+      "description": "Topped with melted pepper Jack cheese, applewood smoked bacon,spiced panko onion rings, fresh leaf lettuce, tomato,mango-infused BBQ sauce & Chili's Signature sauce. Served with a side of mango-infused BBQ sauce."
+  },
+  {
+      "type": "burger",
+      "name": "Guacamole Burger",
+      "price": "10",
+      "description": "Topped with fresh guacamole, melted Monterey Jack cheese, fire-roasted jalapeños, sauteed red & green bell peppers, caramelized onions & cumin-lime sour cream."
+  },
+  {
+      "type": "burger",
+      "name": "Classic Bacon Burger",
+      "price": "7.50",
+      "description": "Topped with applewood smoked bacon, melted sharp cheddar cheese, house-made garlic dill pickles, fresh leaf lettuce, tomato, sliced red onions & Chili's Signature sauce."
+  },
+  {
+      "type": "burger",
+      "name": "Oldtimer® with Cheese",
+      "price": "8.75",
+      "description": "A Chili's classic - improved! Hand seasoned beef patty, seared to perfection. Topped with house-made garlic dill pickles, fresh leaf lettuce, tomato, sliced red onions & mustard."
+  },
+  {
+      "type": "dessert",
+      "name": "Triple Berry Crumble Cake",
+      "price": "5.65",
+      "description": "Warm blackberries & blueberries baked with rich buttercake topped with streusel and finished with vanilla ice cream, strawberry sauce & cinnamon-sugar."
+  },
+  {
+      "type": "dessert",
+      "name": "Skillet Toffee Fudge Brownie",
+      "price": "4.50",
+      "description": "Oven-baked toffee brownie topped with vanilla ice cream, drizzled with caramel sauce & topped with toffee pieces. († This dish contains nuts)"
+  },
+  {
+      "type": "dessert",
+      "name": "Skillet Chocolate Chip Cookie",
+      "price": "6.50",
+      "description": "Oven-baked chocolate chip cookie topped with vanilla ice cream & drizzled with hot fudge."
+  },
+  {
+      "type": "dessert",
+      "name": "Cheesecake",
+      "price": "3",
+      "description": "A rich New York-style cheesecake with graham cracker crust. Served over strawberry puree."
   }
 ]
