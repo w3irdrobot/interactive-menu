@@ -1,8 +1,6 @@
 import { addClass, article, button, div, h3, p, span, text } from '../builders';
+import { formatPrice } from '../helpers';
 
-function formatPrice(price) {
-  return parseFloat(price).toFixed(2);
-}
 
 export default function menuItem(itemData = {}) {
   const name = addClass(h3(text(itemData.name)), 'name');
