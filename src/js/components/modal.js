@@ -1,4 +1,4 @@
-import { addClass, button, div, h1, i, section, text, ul } from '../builders';
+import { addClass, button, div, h1, i, p, section, text, ul } from '../builders';
 import modalItem from './modalItem';
 
 export default function modal(items = []) {
@@ -7,7 +7,7 @@ export default function modal(items = []) {
 
   let cart;
   if (items.length === 0) {
-    cart = text('Your cart is empty.');
+    cart = p(text('Your cart is empty.'));
   } else {
     const cartItems = items.map(modalItem);
     cart = addClass(ul(...cartItems), 'menu');
