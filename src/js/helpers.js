@@ -7,3 +7,17 @@ export function isType(type) {
     return item.type === type;
   };
 }
+
+function $(query) {
+  return document.querySelector(query);
+}
+
+export function setChildren(query, children) {
+  const ele = $(query);
+
+  while (ele.firstChild) {
+    ele.removeChild(ele.firstChild);
+  }
+
+  ele.appendChild(children);
+}
