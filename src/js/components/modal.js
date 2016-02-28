@@ -29,5 +29,9 @@ export default function modal(store, items = []) {
     }
   });
 
+  store.on('ITEM_ADDED', ({ items, cart}) => {
+
+  });
+
   return modalEle;
 }

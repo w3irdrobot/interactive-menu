@@ -1,6 +1,6 @@
 const defaultState = {
   items: [],
-  cart: [],
+  cart: (new Set()),
   cartVisible: false,
 };
 
@@ -16,7 +16,7 @@ export function createStore(reducer) {
     listeners[event].push(cb);
   }
 
-  function trigger(event, data) {
+  function trigger(event, data = {}) {
     state = reducer(state, event, data);
 
     if (listeners[event]) {

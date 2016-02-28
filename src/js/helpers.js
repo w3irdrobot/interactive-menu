@@ -2,10 +2,10 @@ export function formatPrice(price) {
   return parseFloat(price).toFixed(2);
 }
 
-export function isType(type) {
-  return function itemIsType(item) {
-    return item.type === type;
-  };
+export function filterByType(map, type) {
+  return Object.keys(map)
+    .filter(key => map[key].type === type)
+    .map(key => map[key]);
 }
 
 export function $(query) {
@@ -39,10 +39,17 @@ export function $(query) {
     });
   }
 
+  function attr(attribute, value) {
+    elements.forEach(ele => {
+      ele.setAttribute(attribute, value);
+    });
+  }
+
   return {
     on,
     children,
     addClass,
     removeClass,
+    attr,
   };
 }

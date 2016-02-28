@@ -6,11 +6,13 @@ function reducer(state, event, data) {
   switch (event) {
     case 'SET_ITEMS':
       return Object.assign({}, state, {
-        items: data.items,
+        items: data.items.reduce((total, item) =>
+          Object.assign({}, total, { [item.id]: item })
+          , {}),
       });
     case 'ITEM_ADDED':
       return Object.assign({}, state, {
-        cart: state.cart.concat(data.item),
+        cart: (new Set(state.cart)).add(data.item),
       });
     case 'TOGGLE_SHOW_CART':
       return Object.assign({}, state, {
@@ -28,6 +30,6 @@ fetch('food.json')
   .then(resBody => {
     const body = document.querySelector('body');
     body.insertBefore(app(store), body.childNodes[0]);
-    setupListeners(store);
     store.trigger('SET_ITEMS', { items: resBody });
+    setupListeners(store);
   });
