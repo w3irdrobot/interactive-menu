@@ -23,9 +23,9 @@ export default function modal(store, items = []) {
   store.on('TOGGLE_SHOW_CART', ({ cartVisible }) => {
     const ele = $('#modal');
     if (cartVisible) {
-      ele.classList.add('show');
+      ele.addClass('show');
     } else {
-      ele.classList.remove('show');
+      ele.removeClass('show');
     }
   });
 

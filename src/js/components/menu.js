@@ -1,5 +1,5 @@
 import { addClass, addId, div, section } from '../builders';
-import { setChildren } from '../helpers';
+import { $ } from '../helpers';
 import leftMenu from './leftMenu';
 import rightMenu from './rightMenu';
 
@@ -8,7 +8,7 @@ export default function menu(store) {
 
   store.on('SET_ITEMS', ({ items }) => {
     const columns = addClass(section(leftMenu(items), rightMenu(items)), 'columns');
-    setChildren('#menu', columns);
+    $('#menu').children(columns);
   });
 
   return menuEle;
