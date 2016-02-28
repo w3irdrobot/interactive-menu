@@ -8,7 +8,7 @@ export function isType(type) {
   };
 }
 
-function $(query) {
+export function $(query) {
   return document.querySelector(query);
 }
 

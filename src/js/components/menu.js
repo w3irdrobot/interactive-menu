@@ -1,7 +1,7 @@
 import { addClass, addId, div, section } from '../builders';
+import { setChildren } from '../helpers';
 import leftMenu from './leftMenu';
 import rightMenu from './rightMenu';
-import { setChildren } from '../helpers';
 
 export default function menu(store) {
   const menuEle = addId(addClass(div(), 'container'), 'menu');
