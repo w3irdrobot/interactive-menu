@@ -41,8 +41,16 @@ export function $(query) {
 
   function attr(attribute, value) {
     elements.forEach(ele => {
-      ele.setAttribute(attribute, value);
+      if (value === false) {
+        ele.removeAttribute(attribute);
+      } else {
+        ele.setAttribute(attribute, value);
+      }
     });
+  }
+
+  function map(cb) {
+    return elements.map(cb);
   }
 
   return {
@@ -51,5 +59,6 @@ export function $(query) {
     addClass,
     removeClass,
     attr,
+    map,
   };
 }

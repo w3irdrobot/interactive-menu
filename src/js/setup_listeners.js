@@ -9,14 +9,31 @@ export default function (store) {
     store.trigger('TOGGLE_SHOW_CART');
   });
 
-  $('.add-to-cart').on('click', e => {
-    let parent = e.currentTarget.parentElement;
+  function getParentWithKey(element) {
+    let parent = element.parentElement;
 
     while (parent && !parent.dataset.key) {
       parent = parent.parentElement;
     }
 
+    return parent;
+  }
+
+  $('.add-to-cart').on('click', e => {
+    const parent = getParentWithKey(e.currentTarget);
+
     const key = parseInt(parent.dataset.key, 10);
     store.trigger('ITEM_ADDED', { item: key });
+  });
+
+  $('body').on('click', e => {
+    if (e.target.classList.contains('remove')) {
+      const element = e.target;
+      const parent = getParentWithKey(element);
+      const key = parseInt(parent.dataset.key, 10);
+
+      parent.parentElement.removeChild(parent);
+      store.trigger('ITEM_REMOVED', { item: key });
+    }
   });
 }
