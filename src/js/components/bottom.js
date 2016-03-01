@@ -1,7 +1,8 @@
-import { addClass, div, footer } from '../builders';
+import { addClass, div, footer, text, p } from '../builders';
 
 export default function bottom() {
-  const content = addClass(div(), 'content', 'is-centered');
+  const name = p(text('Alex Sears'));
+  const content = addClass(div(name), 'content', 'is-centered');
 
   const container = addClass(div(content), 'container');
 
