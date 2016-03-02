@@ -1,8 +1,7 @@
-import { addClass, addId, div, i, img, nav, span } from '../builders';
+import { addClass, addId, div, i, nav, span } from '../builders';
 
 export default function navbar() {
-  const logo = addClass(img('static/fancybear_white.png'), 'logo');
-  const navLeft = addClass(div(logo), 'navbar-left');
+  const navLeft = addClass(div(), 'navbar-left');
 
   const cartIcon = addId(addClass(i(), 'fa', 'fa-shopping-cart'), 'cart-icon');
   const cartItems = addClass(span(), 'cart-items');
