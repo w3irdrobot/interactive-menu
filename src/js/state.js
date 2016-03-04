@@ -1,5 +1,5 @@
 const defaultState = {
-  items: [],
+  items: {},
   cart: (new Set()),
   cartVisible: false,
 };

@@ -7,7 +7,9 @@ export default function menu(store) {
   const menuEle = addId(addClass(div(), 'container'), 'menu');
 
   store.on('SET_ITEMS', ({ items }) => {
-    const columns = addClass(section(leftMenu(items), rightMenu(items)), 'columns');
+    const leftSide = leftMenu(items);
+    const rightSide = rightMenu(items);
+    const columns = addClass(section(leftSide, rightSide), 'columns');
     $('#menu').children(columns);
   });
 
