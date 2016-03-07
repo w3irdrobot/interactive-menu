@@ -14,13 +14,9 @@ export default function menu(store) {
   });
 
   store.on('ITEM_ADDED', ({ cart }) => {
-    const articles = [];
-    const buttons = [];
-
-    for (const entry of cart) {
-      articles.push(`article[data-key='${entry}']`);
-      buttons.push(`article[data-key='${entry}'] button.add-to-cart`);
-    }
+    const cartArray = [...cart];
+    const articles = cartArray.map(id => `article[data-key='${id}']`);
+    const buttons = cartArray.map(id => `article[data-key='${id}'] button.add-to-cart`);
 
     $(articles.join(', ')).addClass('in-cart');
     $(buttons.join(', ')).attr('disabled', 'disabled');
