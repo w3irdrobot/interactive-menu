@@ -8,7 +8,7 @@
     "build:scss": "node-sass src/scss/styles.scss --output build --source-map-embed --source-map-contents",
     "watch:scss": "npm run build:scss -- --watch",
     "build": "npm run build:js && npm run build:scss",
-    "serve": "npm run watch:js -- & > /dev/null 2>&1; npm run watch:scss -- & > /dev/null 2>&1; lite-server"
+    "serve": "npm run build; npm run watch:js -- & > /dev/null 2>&1; npm run watch:scss -- & > /dev/null 2>&1; lite-server"
   },
   "repository": {
     "type": "git",
